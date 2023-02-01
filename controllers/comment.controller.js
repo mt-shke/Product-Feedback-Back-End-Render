@@ -1,5 +1,5 @@
 const data = require("../data.json");
-// const replies = require("../replies.json");
+const replies = require("../replies.json");
 const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors");
 const CommentModel = require("../models/comment.model");

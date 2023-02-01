@@ -42,10 +42,11 @@ cors
 </details>
 
 <details>
-<summary>Deploy on render</summary>
+<summary>Deploy on Render</summary>
 
 ```js
-// - plus on render
+// Deploy backend
+// - New > Web service
 ```
 
 </details>
