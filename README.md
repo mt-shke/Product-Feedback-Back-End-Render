@@ -40,3 +40,12 @@ cors
 ```
 
 </details>
+
+<details>
+<summary>Deploy on render</summary>
+
+```js
+-
+```
+
+</details>
