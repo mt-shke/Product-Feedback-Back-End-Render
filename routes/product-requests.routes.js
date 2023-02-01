@@ -9,15 +9,15 @@ const {
     createProductRequest,
     updateProductRequest,
     deleteProductRequest,
-    // createMultipleDummyRequests,
+    createMultipleDummyRequests,
     setUpvote,
 } = require("../controllers/productRequest.controller");
 const {
     postComment,
-    // createMultipleDummyComments,
+    createMultipleDummyComments,
     deleteComment,
     updateComment,
-    // createMultipleReplies,
+    createMultipleReplies,
 } = require("../controllers/comment.controller");
 
 router
@@ -29,15 +29,24 @@ router
     );
 
 // Original Dummy FE data
-// router
-// 	.route("/create-multiple-requests")
-// 	.post([authenticateUser, authorizePermissions("admin")], createMultipleDummyRequests);
-// router
-// 	.route("/create-multiple-comments")
-// 	.post([authenticateUser, authorizePermissions("admin")], createMultipleDummyComments);
-// router
-// 	.route("/create-multiple-replies")
-// 	.post([authenticateUser, authorizePermissions("admin")], createMultipleReplies);
+router
+    .route("/create-multiple-requests")
+    .post(
+        [authenticateUser, authorizePermissions("admin")],
+        createMultipleDummyRequests
+    );
+router
+    .route("/create-multiple-comments")
+    .post(
+        [authenticateUser, authorizePermissions("admin")],
+        createMultipleDummyComments
+    );
+router
+    .route("/create-multiple-replies")
+    .post(
+        [authenticateUser, authorizePermissions("admin")],
+        createMultipleReplies
+    );
 
 // Unique product request
 router
