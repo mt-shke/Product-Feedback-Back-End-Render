@@ -47,6 +47,11 @@ cors
 ```js
 // Deploy backend
 // - New > Web service
+// - Env variables
+
+// MONGO_URI="mongodb+srv://node:nodepass@cluster0.chfbj.mongodb.net/02-FM-PFEEDBACK?retryWrites=true&w=majority"
+// JWT_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+// SENDGRID_API_KEY="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"
 ```
 
 </details>
