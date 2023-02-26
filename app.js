@@ -38,10 +38,8 @@ app.use(xss());
 app.use(
     cors({
         origin: [
-            "https://fm-pfeedback.netlify.app",
-            "https://fm-pfeed.netlify.app",
-            "http://localhost:3000",
-            "http://localhost:5000",
+            // "http://localhost:3000",
+            // "http://localhost:5000",
             "https://pfeedback.micheltcha.com",
             "https://micheltcha.com",
         ],
