@@ -38,8 +38,9 @@ app.use(xss());
 app.use(
     cors({
         origin: [
-            // "http://localhost:3000",
-            // "http://localhost:5000",
+            "http://localhost:3000",
+            "http://localhost:5000",
+            "https://fm.pfeedback.micheltcha.com",
             "https://pfeedback.micheltcha.com",
             "https://micheltcha.com",
         ],
