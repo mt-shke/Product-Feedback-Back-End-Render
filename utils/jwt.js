@@ -14,10 +14,13 @@ const attachCookiesToResponse = ({ res, user, refreshToken }) => {
     const TOKEN_15MINUTES = 1000 * 60 * 15;
     const TOKEN_30DAYS = 1000 * 60 * 60 * 24 * 30;
 
+    console.log("in jwt fn");
+
     res.cookie("accessToken", accessTokenJWT, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        domain: "fm.pfeedback.micheltcha.com",
+        // domain: "fm.pfeedback.micheltcha.com",
+        // domain: "localhost:3000",
         signed: true,
         expires: new Date(Date.now() + TOKEN_15MINUTES),
     });
@@ -25,7 +28,8 @@ const attachCookiesToResponse = ({ res, user, refreshToken }) => {
     res.cookie("refreshToken", refreshTokenJWT, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        domain: "fm.pfeedback.micheltcha.com",
+        // domain: "fm.pfeedback.micheltcha.com",
+        // domain: "localhost:3000",
         signed: true,
         expires: new Date(Date.now() + TOKEN_30DAYS),
     });
@@ -35,14 +39,16 @@ const removeCookies = ({ res }) => {
     res.cookie("accessToken", "logout", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        domain: "fm.pfeedback.micheltcha.com",
+        // domain: "fm.pfeedback.micheltcha.com",
+        // domain: "localhost:3000",
         signed: true,
         expires: new Date(Date.now()),
     });
     res.cookie("refreshToken", "logout", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        domain: "fm.pfeedback.micheltcha.com",
+        // domain: "fm.pfeedback.micheltcha.com",
+        // domain: "localhost:3000",
         signed: true,
         expires: new Date(Date.now()),
     });

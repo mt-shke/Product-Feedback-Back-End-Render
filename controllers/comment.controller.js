@@ -8,6 +8,11 @@ const UserModel = require("../models/user.model");
 // Comments
 const postComment = async (req, res) => {
     const { content, productRequest, comment } = req.body;
+
+    console.log("req body");
+
+    console.log(req.body);
+
     if (!content && !productRequest) {
         throw new CustomError.BadRequestError(
             "Content and ProductRequestId missing"
